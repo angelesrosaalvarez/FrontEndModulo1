@@ -1,13 +1,115 @@
+$grid-item-base-color1: blue;
+$grid-item-base-color2: red;
+$grid-item-base-color3: green;
 
-input {
-    padding: 15px;
+.container-1 {
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-columns: repeat(4, 1fr) 2fr repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    margin: 10px;
+
+   div {
+    display: flex;
+        width: 100%;
+        height: 100%;
+        color: white; 
+        background-color: $grid-item-base-color1;
+        justify-content: center;
+        align-items: center;
+     
+   }  
+
+   @for $i from 1 through 4 {
+
+    div:nth-child(#{$i}) {
+      background-color: darken($grid-item-base-color1, 30% - ($i*7));
+      color: darken(White, 100%- ($i*20));
+    }
+ }
+
+ @for $i from 1 through 5 {
+
+  div:nth-child(#{$i+4}) {
+    background-color: lighten($grid-item-base-color1, 0% + ($i*7));
+    color: darken(White, 100%- ((5-$i)*20));
   }
-  
-  input:focus {
-    background-color: darkolivegreen;
-    color: white;
+}
+}
+
+.container-2 {
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-columns: repeat(4, 1fr) 2fr repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    margin: 10px;
+
+   div {
+    display: flex;
+        width: 100%;
+        height: 100%;
+        color: white; 
+        background-color: $grid-item-base-color2;
+        justify-content: center;
+        align-items: center;
+     
+   }  
+
+   @for $i from 1 through 4 {
+
+    div:nth-child(#{$i}) {
+      background-color: darken($grid-item-base-color2, 30% - ($i*7));
+      color: darken(White, 100%- ($i*20));
+    }
+ }
+
+ @for $i from 1 through 4 {
+
+  div:nth-child(#{$i+5}) {
+    background-color: lighten($grid-item-base-color2, 0% + ($i*7));
+    color: darken(White, 100%- ((5-$i)*20));
   }
-  
-  input:hover {
-    background-color: darkred;
+}
+}
+
+.container-3 {
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-columns: repeat(4, 1fr) 2fr repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    margin: 10px;
+
+   div {
+    display: flex;
+        width: 100%;
+        height: 100%;
+        color: white; 
+        background-color: $grid-item-base-color3;
+        justify-content: center;
+        align-items: center;
+     
+   }  
+
+   @for $i from 1 through 4 {
+
+    div:nth-child(#{$i}) {
+      background-color: darken($grid-item-base-color3, 30% - ($i*7));
+      color: darken(White, 100%- ($i*20));
+    }
+ }
+
+ @for $i from 1 through 5 {
+
+  div:nth-child(#{$i+4}) {
+    background-color: lighten($grid-item-base-color3, 0% + ($i*7));
+    color: darken(White, 100%- ((5-$i)*20));
   }
+}
+}
+ 
