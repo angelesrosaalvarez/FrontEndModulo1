@@ -1,0 +1,46 @@
+
+
+body
+{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+  padding: 10px;
+  font-size: 30px;
+}
+
+.container-1 {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blueviolet;
+    color: white;
+    
+    .box
+    {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      &:hover{
+        background-color: yellow;
+        color: black;
+      }
+
+      @media screen and (max-width: 450px) {
+        width: 100%;
+      }
+    }
+
+
+    @media screen and (max-width: 450px) {
+      flex-direction: column;
+    }
+   
+}
+
+ 
