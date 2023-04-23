@@ -45,6 +45,11 @@ main{
     grid-template-columns: 100%;
     grid-template-rows: auto 300px auto 250px auto 250px;
 
+    #top-text::after {
+        content: '5';
+        font-weight: 700;
+    }
+
     section
     {
         display: flex;
